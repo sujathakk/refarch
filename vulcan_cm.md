@@ -80,6 +80,10 @@ Given a target of 4 levels of granularity at most, only the leaf capabilities do
 | Testing assistant | ADA testing, Device testing, Fwd/Bwd compatability testing | |
 | Demo video generation | Auto generated commercials, reels and shorts about new offers | | 
 | Discover Virtual human agent | Personalized VR agent for every customer|
+| HR onboaring automated | Training, document, background checking all automated | |
+| Resume screeing and interview scheduling | Linked in integrated APIs to scan and look for potential hires | |
+| Marketing and sales | | |
+
 
 ### 5.	Description (Yes – Required)
 General description of the capability, absolutely no references to technology or products
