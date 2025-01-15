@@ -1,4 +1,4 @@
-# Vulcan Capabilties
+# GenAI Capabilties
 
 ## Definition
 
@@ -6,7 +6,29 @@ A capability is an ability that an organization, person, or system possesses. [s
 
 Capabilities are unique, atomic, and can only exist once in an     
 organization
+### Capability Maps
 
+Capability Maps have numerous uses:
+
+* Used and owned by the business to layout business capabilities that can be leveraged to evaluate the degree to which the capabilities support the business strategy 
+* Generated within Discover's Architecture Strategy and Innovation capability maps are used to illustrate enterprise technical capabilities provided within a technology domain 
+* Depict maturity across numerous sectors, including but not limited to engineering/operational maturity. Maturity provides justification for prioritization & funding where capability uplift is targeted, usually in support of business initiatves/strategy
+
+For clarity capability maps should limit subs to two levels
+
+Dependencies and composition should be avoided in this view
+
+TODO: Does LeanIX provide a widget/visualization?
+
+![](images/capability-map.png)
+
+*Aggregated to TSI Pillar*
+
+ ![](genai_cpm.png)
+ 
+### Capability Increments
+
+![](genai_ci.png)
 
 ## Attributes
 
@@ -17,17 +39,20 @@ While maturity for capabilities is fine in helping to drive planning, maturity i
 
 |  | **Basic** | Intermediate | Advanced| Avant-garde |
 | ----| ----| -----| -----| -----|
-| Technique | Prompt engineering | Feature Engineering, Transfer learning, Fine tuning | RAG | Self-trained models ,Reinforcement Learning HF| 
-| Models| Light LLMs, Opensource LLMs (Hugging face) | LLMs ( Amazon Bedrock )| DFS's own embedded model and vector DB | Diffusion, (Amazon Sagemaker)|
-| Applications | Chatbots, Workflow tools and agents | Modeling, Code generation| GenAI virtual agents|  Propriterary DFS models, DFS Mechanical Turks|
-| Data | Pdfs, Texts, jpgs | DFS databases RDBMS, Nosql | RAG - Vector db, embedded db, Graph DB | Scalable vector db|
-| Problem averted | Hallunication mgmt, Basic chat | Provenance detectors | Bias and Variance | User-in-loop | 
+| Technique | Prompt engineering<br/> prompt tuning | Feature Engineering, Transfer learning<br/>Fine tuning | RAG | Self-trained models<br/>Reinforcement Learning HF| 
+| Models| Light LLMs <br/> Opensource LLMs (Hugging face) | LLMs <br/>  Fine-tuned Amazon Bedrock | DFS's own embedded model and vector DB | Diffusion <br/> (Amazon Sagemaker)|
+| Applications | Chatbots <br/>Workflow tools and agents | Modeling <br/> Code generation| GenAI virtual agents|  Propriterary DFS models<br/> DFS Mechanical Turks|
+| Data | Pdfs, Texts, jpgs | DFS databases RDBMS, Nosql | RAG - Vector db, embedded db, Graph DB | Scalable vector db <br/> Synthetic future data|
+| Problems | Hallunication mgmt<br/> Basic chat | Provenance detectors | Bias and Variance | Financial loss, privacy violations <br/> User-in-loop | 
+| Potential Areas | Create opportunities <br/> reduce costs| Manage risk, fraud <br/>automate operations  |  Enable transparency,compliance | Personalize services and products 
 |Time-frame | 1-3months | 1-3 years | 5-10 years| 10+ years|
+
+<!--
 | Organizational Support| | | | |
 | Feature availability| | | | |
 | Testing | | | | |
 | Engineering maturity| | | | |
-| Financials | | | | 
+| Financials | | | | -->
 
 ![](images/ITCMF2.png)
 <!--
@@ -69,30 +94,45 @@ Given a target of 4 levels of granularity at most, only the leaf capabilities do
 | Capability| Description | Assessment |
 | --------| --------| ------|
 | Chat bot | Customer aiding chatbots  | to use both public and dfs customer data |
-| Prompt activated Report, Graphs | Auto generated tableau reports <br/> Self progress tracking  | eg. Send end of month accomplishments and missed deadlines <br/> Auto blocking calendars |
+| Prompt activated Report, Graphs | Auto generated tableau reports <br/> Self progress tracking  | eg. Send end of month accomplishments and missed deadlines <br/> Auto blocking calendars <br/> Goals setting and tracking [Learn a language, get certification, summarize meetings and learnings] |
 | Customer Personal assistant - | Money mgmt , investment alerts, pay bills | Track insurance, vehicle renewals, deposits, holiday savings  |
 | Biometrics integration | Voice activated approvals, denials  | 1 touch payment, report etc., |
 
 #### Level 3
 | Capability| Description | Assessment |
 | --------| --------|------|
-|Coding assistant | Scanning, Debugging, text-to-code | |
-| Testing assistant | ADA testing, Device testing, Fwd/Bwd compatability testing | |
-| Demo video generation | Auto generated commercials, reels and shorts about new offers | | 
-| Discover Virtual human agent | Personalized VR agent for every customer|
-| HR onboaring automated | Training, document, background checking all automated | |
-| Resume screeing and interview scheduling | Linked in integrated APIs to scan and look for potential hires | |
-| Marketing and sales | | |
+| AI video generation | C-level executive messages delivered as their AI videos of self | Discover customer feedback stories, testimonials as AI videos with customer avatars| 
+| Discover Virtual human agent | Personalized VR agent/avatar built option for every customer | 
+| HR process automation | Resume screeing and interview scheduling, Training materials, Evidence gathering(transcripts, experience letters, recommendation and referrals communication), background checking all automated | Linked in integrated APIs to scan and look for potential hires | 
+| Marketing and sales | Competitive research, Content creation, Commericals  | Auto generated commercials, reels and shorts about new offers , DFS jingles on offers , DFS behaviours integrated mascot messages and reels/shorts |
+| Coding assistant | Scanning, Debugging, text-to-code, ADA compliant  |  obsolete s/w,h/w TIME model action related alerts, fwd and bwd compbatability tracking
+| AI properitary solutions | Wearable totems-QRcode embedded jewelry to use as password instead of biometrics and AI to recognize and approve them| DFS models
 
 
 ### 5.	Description (Yes – Required)
 General description of the capability, absolutely no references to technology or products
 
+
 ### 6.	Owner (Yes – Optional)
 Owner of the capability. Owner is best suited to the technology/product implementing the capability. Discover’s metamodel may require this.
 
+Capability | Team/Owner | Description |
+------------| ------------| -----------|
+Summarization | DFS employees | Meeting summarization, github contributions, goals tracking, certifications and contributions tracking
+Text Generation | DFS employees | Newsletters, Hyperpersonalization of text based on business, IT, support, risk etc., DFS templates for dfs document types and based on roles and policies
+Image,Video generation | DNA, R&D | Creating content like Training material for certifications/technology/marketing , new law and legal updates, change in retention policies etc.,
+Coding assistance | BT | Identifying right tools and technology to encourage text-to-code for simple tasks, code scanning, report/graphs/chart generation
+Provenance detectors | BT fraud, aml teams | Create models to track and identify anamolies using internal and public data, PEP/REP lists, AML, Visualizer, FIU etc.,
+
+
 ### 7.  Uplift (Yes - Required)
 Uplift indicates of the capability needs investment (funding, people) in support of a business intiiative/strategy. Like maturity, specifying uplift for a capability is fine where there is a one to one relationship between capability and technology/product but better suited on the product side of the relationship
+Capability| Investment type | Team/Owner | Description |
+----------| ---------| ---------| --------|
+Mischief managed | People | (Ethical trolls, Troll Turks)<br/>DFS Risk/Compliance | Humans to aid with RLHF, prompt injections, HAP detection, privacy violations, bias tracking, identifying overfitting, underfitting models, hallucination management
+Prompt Engineering | People | Business | Training provided to improve and standardise prompt tuning and prompt engineering and identify prompt injections
+Customer acquistion | People+Funding | HR | potential customer acquistion eg. Y combinator tracking to identify bank options for startup companies
+Hiring and retention| People+Funding | HR | Tracking internal employee performance and raising alerts and easing internal movements and wage negotiations, Integrating with career sites and scannig for potential qualified employees, keeping up with wages, watching market hiring status , integrating with colleges and universities and patent entries, citizenship status etc.,
 
 ### 8.  Financials (Yes - Required)
 Like maturity, financials is best suited to the technology/product implementing the capability. Where there is a one to one relationship  articulating for the capability is fine. Financials can articulate whether new funding is required based on it being required in supoort of business initiative/strategy. Discover’s metamodel may require this.
@@ -126,29 +166,7 @@ Figure below highlights how capabilities are intended to be used.
 
   ![](images/capability-relationships.png)
 
-### Capability Maps
 
-Capability Maps have numerous uses:
-
-* Used and owned by the business to layout business capabilities that can be leveraged to evaluate the degree to which the capabilities support the business strategy 
-
-* Generated within Discover's Architecture Strategy and Innovation capability maps are used to illustrate enterprise technical capabilities provided within a technology domain 
-
-* Depict maturity across numerous sectors, including but not limited to engineering/operational maturity. Maturity provides justification for prioritization & funding where capability uplift is targeted, usually in support of business initiatves/strategy
-
-For clarity capability maps should limit subs to two levels
-
-Dependencies and composition should be avoided in this view
-
-TODO: Does LeanIX provide a widget/visualization?
-
-![](images/capability-map.png)
-
-
-*Aggregated to TSI Pillar*
-
- ![](images/capability-map-pillar.png)
- 
 
 ### Capability Tree
 
@@ -194,6 +212,52 @@ TODO: Check on the visualization capabilities within LeanIX
   * Feature/Technology exploration: A developer seeking to leverage a capability would look to the tech radar for a technology/process and research feature sets within those products
 
   * Technology Radars will be generated within LeanIX
+
+* **Citizen Development technology radar**
+  *   Machine Learning
+      *  Supervised
+      *  Semi-supervisied
+      *  Unsupervisied
+      *  Reinforcement learning
+  *   Deep Learning
+      * RNN - Recurrent Neural Networks
+      * CNN - Convolutional Neural Networks
+      * Autoencoders
+      * GAN - Generative Adversial Networks    
+      * Transformers
+  *   NLP
+      * Sentiment analysis
+      * Tokenization
+      * NER  - Named Entity Recognition
+      * Feature extraction
+      * Text summarization
+      * Q&A 
+  *   Computer vision
+      * Object detection
+      * Image classification
+      * Facial recognition
+      * Localization
+      * Landmark detection
+      * Augumented reality
+  *   Data science
+      * Predictive,Prescriptive, Descriptive, Inferential 
+      * Data engineering
+      * Data modeling
+      * Data visualization    
+     
+or 
+* **Citizen Development technology radar**
+  *  Public AI
+     *  Public GenAI services (chatgpt)
+  *  Vendor AI 
+     *  GenAI saas apps (Kane AI Lambdatest)
+  *  Pre-trained models
+     *  Base LLMs 
+  *  Fine-tuned models
+     *  LLM fine-tuned models
+  *  Self-trained models
+     *  Sagemaker 
+
 
 ### Strategies
 
